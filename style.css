@@ -32,8 +32,10 @@ main {
 article {
   border-radius: 1%;
     padding: 10px;
-    border: none;
     position: relative;
+    border: none;
+
+
   }
   
   article::before,

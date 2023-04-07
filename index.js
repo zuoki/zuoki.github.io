@@ -26,7 +26,6 @@ function getCharacters(done) {
       article.appendChild(imagenContainer);
       article.appendChild(h2);
       article.appendChild(span);
-  
       main.appendChild(article);
     });
   });
