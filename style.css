@@ -1,99 +1,104 @@
 * { font-family: 'Mynerve', cursive; 
-  color: brown;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-background-color: black;
-}
+
 header{
-  position: sticky;
+  text-shadow: 0 0 0  red;
+  background-color: rgb(124, 220, 124);
+  color: rgb(252, 240, 15);
+  border: solid 2px rgba(40, 37, 37, 0.856);
   top: 20;
   width: 100%;
   height: 15vh;
   text-align: center;
 }
+
 h1{
     text-align: center;
-}
-article{
-  background-color: rgb(40, 158, 149);
-  margin-left: auto;
 }
 main {
     display: grid;
     grid-template-columns: 0fr 0fr 0fr 0fr;
     gap: 8px;
 }
-.image-container{
- width: 100%;
-}
 article {
-  border-radius: 1%;
+  width: 23vw;
+  background-color: rgb(40, 158, 149);
+  margin-left: auto;
+  border-radius: 2%;
     padding: 10px;
     position: relative;
     border: none;
-
-
+    top: 30px;
+    left: 2vw;
   }
-  
-  article::before,
-  article::after {
-    content: "";
+  article:hover {
+    left: 3.7vh;
+    overflow: visible;
+    z-index: 100;
+    border: solid 3px rgba(40, 37, 37, 0.856);
+    transform: scale(1.08);
+    transition: transform 0.2s ease-in-out;
+  }
+  article:active{
+    left: 3.7vh;
+    transform: scale(1.00);
+    background-color: rgba(40, 37, 37, 0.856);
+  }
+  div img:first-child {
+     height: 44vh;
+     width: 21.3vw; 
+   border-radius: 2%;
+  }
+  #img_header{
     position: absolute;
+    height: 100px;
+    width: 300px;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 5px;
-    box-shadow: 0 0 0 rgba(136, 253, 130, 0.4),
-                0 0 0 rgba(136, 253, 130, 0.3),
-                0 0 0 rgba(136, 253, 130, 0.2),
-                0 0 0 rgba(136, 253, 130, 0.1);
-    animation: portal 2s infinite ease-in-out;
   }
-  
-  article::before {
-    z-index: -1;
-  }
-  
-  @keyframes portal {
-    0% {
-      box-shadow: 0 0 0 rgba(136, 253, 130, 0.4),
-                  0 0 0 rgba(136, 253, 130, 0.3),
-                  0 0 0 rgba(136, 253, 130, 0.2),
-                  0 0 0 rgba(136, 253, 130, 0.1);
-    }
-    100% {
-      box-shadow: 0 0 50px rgba(136, 253, 130, 0.4),
-                  0 0 30px rgba(136, 253, 130, 0.3),
-                  0 0 20px rgba(136, 253, 130, 0.2),
-                  0 0 10px rgba(136, 253, 130, 0.1);
-    }
-  }
- /* Animación de cambio de color de fondo */
- @keyframes colorChange {
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right, #8cff00, #00bfff);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.pickle-rick {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-image: url(img/penackleRick.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
   0% {
-    background-color: #36c719;
-  }
-  25% {
-    background-color: #18a8c8;
-  }
-  50% {
-    background-color: #20c31b;
-  }
-  75% {
-    background-color: #09a0ae;
+    transform: rotate(0deg);
   }
   100% {
-    background-color: #4ae62a;
+    transform: rotate(360deg);
   }
 }
-
-/* Aplicar la animación al header */
-header {
-  animation: colorChange 30s linear infinite;
+footer{
+  margin-top: 50px;
+  font-size: 2em;
+  color: rgb(252, 240, 15);
+  background-color:rgb(124, 220, 124);
+  border: solid 2px rgba(40, 37, 37, 0.856);
 }
-
   
+  body{
+    border: solid 10px  rgba(40, 37, 37, 0.856);
+    background-color:  rgb(252, 240, 15);
+  }
+.logo{
+  height: 90px;
+  width: 300px;
+position: relative;
+left: 20px;
+}

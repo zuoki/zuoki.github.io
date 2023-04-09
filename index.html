@@ -4,88 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>rick and morty characters</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
-<style>
-  /* Estilos para el contenedor de la animación */
-  #loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: linear-gradient(to right, #8cff00, #00bfff);
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-  }
-  .pickle-rick {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    background-image: url(penackleRick.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  .eye {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #fff;
-    animation: blink 1s infinite alternate;
-  }
-  @keyframes blink {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(0.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-</style>
 </head>
 <body>
 <div id="loader">
   <div class="pickle-rick"></div>
-  <div class="eye"></div>
 </div>
-
-<script>
-  setTimeout(function() {
-    document.querySelector('#loader').style.opacity = '0';
-    setTimeout(function() {
-      document.querySelector('#loader').style.display = 'none';
-    }, 1000);
-  }, 3000);
-</script>
     <header>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-        <h1>API de Rick and Morty </h1>
-        <H3>by Jonathan Gabriel J.</H3>
+      <img class="logo" src="img/Rick_and_Morty.png" alt="">
     </header>
     <h1>PERSONAJES</h1>
     <main></main>
     <script src="index.js"></script>
-    
+    <footer>
+      <h1>Jonathan Gabriel J </h1>
+    </footer>
 </body>
 </html>

@@ -14,7 +14,7 @@ function getCharacters(done) {
       imagenContainer.classList.add("imagen-container");
       const imagen = document.createElement("img");
       imagen.src = personaje.image;
-      imagen.alt = "PERSONAJE";
+      imagen.alt = "personaje";
       imagenContainer.appendChild(imagen);
   
       const h2 = document.createElement("h2");
@@ -29,4 +29,9 @@ function getCharacters(done) {
       main.appendChild(article);
     });
   });
-  
+  setTimeout(function() {
+    document.querySelector('#loader').style.opacity = '0';
+    setTimeout(function() {
+      document.querySelector('#loader').style.display = 'none';
+    }, 1000);
+  }, 3000);
