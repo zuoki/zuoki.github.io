@@ -8,6 +8,7 @@ function showCharacters(data) {
   const main = document.querySelector("main");
   main.innerHTML = "";
 
+  
   if (data.results.length > 0) {
     data.results.forEach(personaje => { 
       const article = document.createElement("article");
@@ -37,6 +38,7 @@ function showCharacters(data) {
   }
 }
 
+
 const input = document.querySelector("input");
 input.addEventListener("keyup", function(event) {
   if (event.key === "Enter") {
@@ -45,6 +47,7 @@ input.addEventListener("keyup", function(event) {
     getCharacters(showCharacters, url);
   }
 });
+
 
 getCharacters(showCharacters, "https://rickandmortyapi.com/api/character");
 
