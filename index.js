@@ -1,6 +1,7 @@
 function getCharacters(done, url) {
   fetch(url)
     .then(response => response.json())
+    
     .then(data => done(data));
 }
 
